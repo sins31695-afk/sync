@@ -39,10 +39,10 @@
   <div class="wrap">
     
     <div>
-      <!-- Web3Forms API Endpoint -->
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms API Endpoint with ID for JavaScript -->
+      <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
         
-        <!-- আপনার জেনারেট হওয়া আসল Access Key টি এখানে বসানো হয়েছে -->
+        <!-- আপনার জেনারেট হওয়া আসল Access Key -->
         <input type="hidden" name="access_key" value="2ba7fb48-f04a-4910-9bfa-c43ea59fd394">
 
         <div class="field-row">
@@ -71,7 +71,7 @@
           <textarea id="message" name="message" required></textarea>
         </div>
         <button type="submit" class="btn btn-solid">Send Message</button>
-        <p class="form-status note"></p>
+        <p class="form-status note" style="margin-top: 15px; font-weight: bold; font-size: 15px;"></p>
       </form>
     </div>
 
@@ -153,5 +153,39 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- AJAX JavaScript to handle redirection and show success message -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    const form = e.target;
+    const statusText = form.querySelector('.form-status');
+    const formData = new FormData(form);
+    
+    statusText.style.color = "inherit"; 
+    statusText.innerHTML = "Sending...";
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            statusText.style.color = "#28a745"; 
+            statusText.innerHTML = "✔ Message sent successfully!";
+            form.reset(); 
+        } else {
+            statusText.style.color = "#dc3545";
+            statusText.innerHTML = "❌ Something went wrong. Try again.";
+        }
+    })
+    .catch(error => {
+        statusText.style.color = "#dc3545";
+        statusText.innerHTML = "❌ Error sending message.";
+    });
+});
+</script>
+
 </body>
 </html>
