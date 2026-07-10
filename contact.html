@@ -36,22 +36,24 @@
 </div>
 
 <section class="section-tight">
-  <div class="wrap split" style="align-items:flex-start;">
+  <div class="wrap">
+    
     <div>
-      <form data-demo-form data-success-msg="Message received — we'll reply within two working days.">
+      <!-- এখানে আপনার Formspree লিঙ্কটি সফলভাবে যুক্ত করা হয়েছে -->
+      <form action="https://formspree.io/f/mbdvnpar" method="POST" data-demo-form data-success-msg="Message received — we'll reply within two working days.">
         <div class="field-row">
           <div class="field">
             <label for="name">Name</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
           </div>
           <div class="field">
             <label for="email">Email</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
           </div>
         </div>
         <div class="field">
           <label for="topic">Subject</label>
-          <select id="topic">
+          <select id="topic" name="subject">
             <option>Order enquiry</option>
             <option>Sizing &amp; fit</option>
             <option>Press</option>
@@ -62,57 +64,53 @@
         </div>
         <div class="field">
           <label for="message">Message</label>
-          <textarea id="message" required></textarea>
+          <textarea id="message" name="message" required></textarea>
         </div>
         <button type="submit" class="btn btn-solid">Send Message</button>
         <p class="form-status note"></p>
       </form>
     </div>
 
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<div class="contact-section-container">
-    
-    
-    <div class="status-badge">
-        ★ <span style="color: #E1306C; font-weight: bold;">SYNC</span> is only Online based
-    </div>
-    
- 
-    <div class="contact-container">
+    <!-- কন্টাক্ট ইনফো সেকশন (বাটনের ঠিক নিচে সেট করা) -->
+    <div class="contact-section-container" style="margin-top: 40px;">
         
-       
-        <div class="contact-info">
-            <div class="contact-item">
-                <h4><i class="fa-solid fa-phone" style="color: #25D366;"></i> Call Us</h4>
-                <a href="tel:+8801870661036">+8801870661036</a>
-            </div>
-            
-            <div class="contact-item">
-                <h4><i class="fa-solid fa-calendar-check"></i> Visit Us On</h4>
-            </div>
+        <div class="status-badge" style="margin-bottom: 15px;">
+            ★ <span style="color: #E1306C; font-weight: bold;">SYNC</span> is only Online based
         </div>
         
-      
-        <div class="social-links">
+        <div class="contact-container" style="display: flex; flex-direction: column; gap: 15px;">
             
-            <div class="contact-item" style="margin-bottom: 15px;">
-                <a href="https://www.instagram.com/sync_09._/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i> sync_09._
-                </a>
+            <div class="contact-info" style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="contact-item">
+                    <h4 style="margin: 0 0 5px 0;"><i class="fa-solid fa-phone" style="color: #25D366;"></i> Call Us</h4>
+                    <a href="tel:+8801870661036" style="text-decoration: none; color: inherit;">+8801870661036</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h4 style="margin: 0;"><i class="fa-solid fa-calendar-check"></i> Visit Us On</h4>
+                </div>
             </div>
-            <div class="contact-item">
-                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sins31695@gmail.com" target="_blank">
-                    <i class="fa-regular fa-envelope"></i> Email
-                </a>
-            </div>
-        </div>  
-                     
+            
+            <div class="social-links" style="display: flex; flex-direction: column; gap: 0;">
+                <!-- ইনস্টাগ্রামের পর ১৫ পিক্সেল গ্যাপ দেওয়া আছে -->
+                <div class="contact-item" style="margin-bottom: 15px;">
+                    <a href="https://www.instagram.com/sync_09._/" target="_blank" style="text-decoration: none; color: inherit;">
+                        <i class="fa-brands fa-instagram"></i> sync_09._
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sins31695@gmail.com" target="_blank" style="text-decoration: none; color: inherit;">
+                        <i class="fa-regular fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>  
+                         
+        </div>
     </div>
-</div>
-    </div>
-</div>
+
   </div>
 </section>
 
