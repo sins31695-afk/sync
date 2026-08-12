@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Modern Manipuri Saree</title>
+<meta name="description" content="The full Modern Manipuri Saree range.">
+<link rel="stylesheet" href="styles.css">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">S<em>a</em>ree</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="shop.html" class="icon-btn">Cart (0)</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="page-intro">
+  <div class="wrap">
+    <div class="breadcrumb">Home / Shop</div>
+    <h1>The Full Range</h1>
+    <p class="desc">Filter by category to find what moves with you.</p>
+  </div>
+</div>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="filters">
+      <div class="fgroup">
+        <label>Category</label>
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="saree">Saree</button>
+      </div>
+      <span class="result-count" id="result-count">0 pieces</span>
+    </div>
+
+    <div class="grid grid-4" id="shop-grid">
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top" style="grid-template-columns: 1.5fr 1fr 1fr;">
+      <div><a href="index.html" class="logo" style="color:var(--paper);">S<em>a</em>ree</a><p style="margin-top:20px; color:var(--paper-line); font-size:14px; max-width:32ch;">Ready-to-wear designed around traditional handloom craft.</p></div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="collections.html">Collections</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Shipping &amp; Delivery</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span data-year></span> Modern Manipuri Saree. All rights reserved.</span><span>Sylhet &middot; Bangladesh</span></div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
